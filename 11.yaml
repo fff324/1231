@@ -221,12 +221,12 @@ proxy-groups:
     interval: 300
     proxies:
       - "regex: ^.*池子.*日本.*$"
-  - name: "池子-其他"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    proxies:
-    - "regex: ^池子(?!.*(港|美|坡|日)).*$"
+#  - name: "池子-其他"
+#   type: url-test
+#    url: "http://www.gstatic.com/generate_204"
+#    interval: 300
+#   proxies:
+#    - "regex: ^池子(?!.*(港|美|坡|日)).*$"
 
   # ========== 自有组 ==========
   # 自有组按节点类型分为三组，分别匹配 tls, 中转, reality
