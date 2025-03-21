@@ -226,7 +226,7 @@ proxy-groups:
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     proxies:
-      - "regex: ^.*池子(?:(?!香港|美国|新加坡|日本).)*$"
+    - "regex: ^池子(?!.*(香港|美国|新加坡|日本)).*$"
 
   # ========== 自有组 ==========
   # 自有组按节点类型分为三组，分别匹配 tls, 中转, reality
