@@ -181,52 +181,6 @@ proxy-groups:
     # 负向匹配：排除包含上述四个地区的节点
     proxies:
       - "regex: ^.*一云(?:(?!香港|美国|新加坡|日本).)*$"
-  # 池子大组：所有名称中含“池子”的节点（自动筛选）
-  - name: "池子"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    # 假设你所有池子节点名称中均包含“池子”
-    proxies:
-      - "池子-香港"
-      - "池子-美国"
-      - "池子-新加坡"
-      - "池子-日本"
-      - "池子-其他"
-      - "regex: ^.*池子.*$"
-
-  # 池子各地区子组
-  - name: "池子-香港"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    proxies:
-      - "regex: ^.*池子.*香港.*$"
-  - name: "池子-美国"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    proxies:
-      - "regex: ^.*池子.*美国.*$"
-  - name: "池子-新加坡"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    proxies:
-      - "regex: ^.*池子.*新加坡.*$"
-  - name: "池子-日本"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    proxies:
-      - "regex: ^.*池子.*日本.*$"
-  - name: "池子-其他"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    # 负向匹配：排除包含上述四个地区的节点
-    proxies:
-      - "regex: ^.*池子(?:(?!香港|美国|新加坡|日本).)*$"
 
   # ========== 自有组 ==========
   # 自有组按节点类型分为三组，分别匹配 tls, 中转, reality
